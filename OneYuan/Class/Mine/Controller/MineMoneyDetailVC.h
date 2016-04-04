@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineMoneyDetailVC : OneBaseVC
+@interface MineMoneyDetailVC : PulaBaseVC
 
 @end

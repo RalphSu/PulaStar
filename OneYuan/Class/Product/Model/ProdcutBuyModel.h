@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ProdcutBuyItem : OneBaseParser
+@interface ProdcutBuyItem : PulaBaseParser
 @property(nonatomic,copy)NSString* userName;
 @property(nonatomic,copy)NSString* userPhoto;
 @property(nonatomic,copy)NSString* userWeb;
@@ -20,7 +20,7 @@
 @property(nonatomic,copy)NSString* buyID;
 @end
 
-@interface ProdcutBuyList : OneBaseParser
+@interface ProdcutBuyList : PulaBaseParser
 @property(nonatomic,copy)NSNumber* Count;
 @property(nonatomic,copy)NSArray*  Rows;
 @end

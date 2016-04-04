@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabShopCartVC : OneBaseVC
+@interface TabShopCartVC : PulaBaseVC
 
 @end

@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MineMyAreaItem : OneBaseParser
+@interface MineMyAreaItem : PulaBaseParser
 @property(nonatomic,copy)NSString*   name;
 @property(nonatomic,copy)NSNumber*   id;
 @property(nonatomic,copy)NSNumber*   zip;
 @end
 
-@interface MineMyAreaList : OneBaseParser
+@interface MineMyAreaList : PulaBaseParser
 @property(nonatomic,copy)NSArray*   regions;
 @end
 
-@interface MineMyAreaInfo : OneBaseParser
+@interface MineMyAreaInfo : PulaBaseParser
 @property(nonatomic,strong)MineMyAreaList*   str;
 @end
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductLotteryVC : OneBaseVC
+@interface ProductLotteryVC : PulaBaseVC
 
 - (id)initWithGoods:(int)goodsId codeId:(int)codeId;
 @end

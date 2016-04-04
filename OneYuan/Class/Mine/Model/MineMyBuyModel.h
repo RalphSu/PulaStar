@@ -10,7 +10,7 @@
 
 @protocol  MineMyBuyItem <NSObject>
 @end
-@interface MineMyBuyItem : OneBaseParser
+@interface MineMyBuyItem : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *codeState;
 @property (nonatomic,copy)NSNumber  *codeID;
 @property (nonatomic,copy)NSString  *goodsName;
@@ -24,7 +24,7 @@
 @property (nonatomic,copy)NSString  *codeRTime;
 @end
 
-@interface MineMyBuyList : OneBaseParser
+@interface MineMyBuyList : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *count;
 @property (nonatomic,copy)NSArray  *listItems;
 @end

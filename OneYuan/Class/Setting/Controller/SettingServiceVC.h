@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingServiceVC : OneBaseVC
+@interface SettingServiceVC : PulaBaseVC
 
 @end

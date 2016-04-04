@@ -10,7 +10,7 @@
 
 @protocol  MineMyOrderItem <NSObject>
 @end
-@interface MineMyOrderItem : OneBaseParser
+@interface MineMyOrderItem : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *codeID;
 @property (nonatomic,copy)NSString  *goodsPic;
 @property (nonatomic,copy)NSString  *goodsSName;
@@ -22,7 +22,7 @@
 @property (nonatomic,copy)NSNumber  *IsPostSingle;
 @end
 
-@interface MineMyOrderList : OneBaseParser
+@interface MineMyOrderList : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *count;
 @property (nonatomic,copy)NSArray  *listItems;
 @end

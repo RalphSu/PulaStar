@@ -23,11 +23,9 @@
 #import "Jxb_Common_Common.h"
 #import "XBDbHandler.h"
 
-#import "OneBaseVC.h"
-#import "OneBaseParser.h"
-#import "OyTool.h"
+#import "PulaBaseVC.h"
+#import "PulaBaseParser.h"
 
-#import "LoginVC.h"
 
 #import "TouchJSON/NSDictionary_JSONExtensions.h"
 #import "Jastor.h"
@@ -43,8 +41,6 @@
 #import "ZipArchive.h"
 #import "PDKeychainBindings.h"
 
-#import "MobClick.h"
-#import "UMFeedback.h"
 
 #define kDidNotifyFromBack      @"kDidNotifyFromBack"
 #define kDidNotifyReloadNewest  @"kDidNotifyReloadNewest"
@@ -62,9 +58,30 @@
 #define kOYCommonUser           @"kOYCommonUser"
 
 
-//因数据涉及版权问题，故这里不做公开，请自行对（一元云购）抓包获取，谢谢
+#define userlogined  @"userLogin"
+#define userExit @"userExit"
+
+#define UserInfoNo @"USER_INFO_NO"//用户编号
+#define UserInfoPassword  @"USER_INFO_PASSWORD" //用户密码
+#define UserLoginStatus @"USER_LOGIN_STATUS"//用户登录状态 false true
+#define UserInfoName  @"USER_INFO_NAME"//用户姓名
+#define UserInfoParentName  @"USER_INFO_PARENT_NAME"//用户家长姓名
+#define UserInfoMobile  @"USER_INFO_MOBILE"//用户联系电话
+#define UserInfoAge @"USER_INFO_AGE"//用户年龄
+
+
+
+//notice: 公告
+//activity: 活动
 //home
+
 #define oyImageBaseUrl      @"http://www.xxx.com/GoodsPic/Pic-200-200/"
+#define courseImageBaseUrl  @"http://121.40.151.183:8080/pula-sys/app/timecourse/icon?"
+#define noticeImageBaseUrl  @"http://121.40.151.183:8080/pula-sys/app/image/icon?"
+#define activityImageBaseUrl @"http://121.40.151.183:8080/pula-sys/app/notice/icon?"
+#define workImageBaseUrl     @"http://121.40.151.183:8080/pula-sys/app/timecoursework/icon?"
+
+
 #define oyImageBigUrl       @"http://www.xxx.com/userpost/big/"
 #define oyHeadBaseUrl       @"http://www.xxx.com/UserFace/"
 #define oyBaseUrl           @"http://www.xxx.com"
@@ -81,7 +98,33 @@
 #define oyHomePage          @"http://www.xxx.com/android/index?action=getHomePage"  //已揭晓、人气推荐、晒单分享
 
 //product
-#define oyGoodsUrl          @"http://www.xxx.com/android/goods?brandID=0&sortID=%d&FIdx=%d&EIdx=%d&orderFlag=%d&isCount=1&action=getGoodsPageList"
+//#define oyGoodsUrl        @"http://www.xxx.com/android/goods?brandID=0&sortID=%d&FIdx=%d&EIdx=%d&orderFlag=%d&isCount=1&action=getGoodsPageList"
+
+#define oyGoodsUrl          @"http://121.40.151.183:8080/pula-sys/app/timecourse/list"
+
+#define courseUrl           @"http://121.40.151.183:8080/pula-sys/app/timecourse/list"
+#define noticeUrl           @"http://121.40.151.183:8080/pula-sys/app/image/listDir?sub=gonggao"
+#define activityUrl         @"http://121.40.151.183:8080/pula-sys/app/notice/list"
+#define getUserActivityUrl  @"http://121.40.151.183:8080/pula-sys/app/noticeorder/list?condition.studentNo=%@"
+#define getUserWorkUrl      @"http://121.40.151.183:8080/pula-sys/app/timecoursework/list?condition.studentNo=%@&_json=1"
+#define loginUrl            @"http://121.40.151.183:8080/pula-sys/app/studentinterface/login?loginId=%@&password=%@"
+#define getUserInfoUrl      @"http://121.40.151.183:8080/pula-sys/app/studentinterface/info?loginId=%@&password=%@"
+#define changePasswordUrl   @"http://121.40.151.183:8080/pula-sys/app/studentinterface/updatePassword?studentNo=%@&oldPassword=%@&newPassword=%@&_json=1"
+
+#define resetPasswordUrl    @"http://121.40.151.183:8080/pula-sys/app/studentinterface/resetPassword?mobile=%@"
+
+#define getUserCourseUrl     @"http://121.40.151.183:8080/pula-sys/app/timecourseorder/list?condition.studentNo=%@"
+
+
+
+#define auditionCreateUrl  @"http://121.40.151.183:8080/pula-sys/app/audition/create?audition.parent=%@&audition.comments=&audition.student=%@&audition.branchNo=%@&audition.branchName=&audition.plan1=%@&audition.age=%@&audition.phone=%@&_json=1"
+
+
+
+
+
+
+
 #define oyGoodsDetail       @"http://www.xxx.com/android/goods?goodsID=%d&action=getGoodsDetailPageData"
 #define oyGoodsByCodeId     @"http://www.xxx.com/android/goods?goodsID=0&action=getGoodsPeriodList&codeID=%d"
 #define oyGoodsLottery      @"http://www.xxx.com/android/lottery?action=getRaffleBaseInfo&codeID=%d"

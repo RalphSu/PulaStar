@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductDetailVC : OneBaseVC
+@interface ProductDetailVC : PulaBaseVC
 - (id)initWithGoodsId:(int)goodsId codeId:(int)codeId;
 @end

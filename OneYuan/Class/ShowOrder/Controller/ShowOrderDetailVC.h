@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowOrderDetailVC : OneBaseVC
+@interface ShowOrderDetailVC : PulaBaseVC
 
 - (id)initWithPostId:(int)postId;
 @end

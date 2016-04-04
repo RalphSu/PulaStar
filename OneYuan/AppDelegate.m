@@ -7,16 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "UserInstance.h"
-#import "TabHomeVC.h"
-#import "TabMineVC.h"
-#import "TabNewestVC.h"
-#import "TabProductVC.h"
-#import "TabShopCartVC.h"
-#import "CartModel.h"
+#import "TabNoticeVC.h"
+#import "TabCourseVC.h"
+#import "TabActivityVC.h"
 #import "APService.h"
-#import "OyTool.h"
-#import "OYDownLibVC.h"
+
+#import "TabCourseVC.h"
+#import "TabMineInfoVC.h"
 
 #define oyUseLib    0
 
@@ -85,6 +82,8 @@
 
 - (UITabBarController*)setRootVC:(BOOL)bShowCart
 {
+    
+    /*
     TabHomeVC *homeVC = [[TabHomeVC alloc] init];
     UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     UIImage *unselectedImage = [UIImage imageNamed:@"tab-home"];
@@ -94,17 +93,121 @@
                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     homeVC.tabBarItem.tag = 0;
+    */
+    
+    /*
+    UIViewController *homeVC = [[UIViewController alloc] init];
+    
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    
+    UIImage *unselectedImage = [UIImage imageNamed:@"tab-home"];
+    UIImage *selectedImage = [UIImage imageNamed:@"tab-home-s"];
+    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"活动"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    homeVC.tabBarItem.tag = 0;
+    */
+    
+    TabActivityVC *activityVC = [[TabActivityVC alloc] init];
+    
+    UINavigationController *activityNav = [[UINavigationController alloc] initWithRootViewController:activityVC];
+    
+    UIImage *unselectedImage = [UIImage imageNamed:@"tab-home"];
+    UIImage *selectedImage = [UIImage imageNamed:@"tab-home-s"];
+    activityVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"活动"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    activityVC.tabBarItem.tag = 0;
+    
+    
+    /*
     
     TabProductVC *proVC = [[TabProductVC alloc] init];
     UINavigationController *proNav = [[UINavigationController alloc] initWithRootViewController:proVC];
     unselectedImage = [UIImage imageNamed:@"tab-pro"];
     selectedImage = [UIImage imageNamed:@"tab-pro-s"];
     
-    proNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"所有商品"
+    proNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"课程"
                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     proNav.tabBarItem.tag = 1;
+   */
     
+    TabCourseVC *courseVC = [[TabCourseVC alloc] init];
+    UINavigationController *courseNav = [[UINavigationController alloc] initWithRootViewController:courseVC];
+    unselectedImage = [UIImage imageNamed:@"tab-pro"];
+    selectedImage = [UIImage imageNamed:@"tab-pro-s"];
+    
+    courseNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"课程"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    courseNav.tabBarItem.tag = 1;
+    
+    
+    
+  /*
+    UIViewController *newVc = [[UIViewController alloc] init];
+    
+    UINavigationController *newNav = [[UINavigationController alloc] initWithRootViewController:newVc];
+    
+    unselectedImage = [UIImage imageNamed:@"tab-new"];
+    selectedImage = [UIImage imageNamed:@"tab-new-s"];
+    newNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"上传作品"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    newNav.tabBarItem.tag = 2;
+  */
+    TabNoticeVC *noticeVC = [[TabNoticeVC alloc] init];
+    
+    UINavigationController *noticeNav = [[UINavigationController alloc] initWithRootViewController:noticeVC];
+    
+    unselectedImage = [UIImage imageNamed:@"tab-new"];
+    selectedImage = [UIImage imageNamed:@"tab-new-s"];
+    noticeNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通告"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    noticeNav.tabBarItem.tag = 2;
+    
+    
+    
+    UIViewController *cartVc = [[UIViewController alloc] init];
+    
+    UINavigationController *cartNav = [[UINavigationController alloc] initWithRootViewController:cartVc];
+    
+    unselectedImage = [UIImage imageNamed:@"tab-cart"];
+    selectedImage = [UIImage imageNamed:@"tab-cart-s"];
+    cartNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"购物车"
+                                                      image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                              selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    cartNav.tabBarItem.tag = 3;
+    
+    TabMineInfoVC *mineInfoVc = [[TabMineInfoVC alloc] init];
+    
+    UINavigationController *mineInfoNav = [[UINavigationController alloc] initWithRootViewController:mineInfoVc];
+    
+    unselectedImage = [UIImage imageNamed:@"tab-cart"];
+    selectedImage = [UIImage imageNamed:@"tab-cart-s"];
+    
+    mineInfoNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我"
+                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    mineInfoNav.tabBarItem.tag = 4;
+    
+    /*
+    UIViewController *mineVc = [[UIViewController alloc] init];
+    
+    UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mineVc];
+    
+    unselectedImage = [UIImage imageNamed:@"tab-cart"];
+    selectedImage = [UIImage imageNamed:@"tab-cart-s"];
+    
+    mineNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我"
+                                                       image:[unselectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                               selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    mineNav.tabBarItem.tag = 4;
+    */
+    
+    /*
     TabNewestVC * newVc = [[TabNewestVC alloc] init];
     UINavigationController * newNav = [[UINavigationController alloc] initWithRootViewController:newVc];
     unselectedImage = [UIImage imageNamed:@"tab-new"];
@@ -135,13 +238,13 @@
                                                selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     mineNav.tabBarItem.tag = 4;
     
-    
+    */
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    if(bShowCart)
-        tabBarController.viewControllers = @[homeNav,proNav,newNav,cartNav,mineNav];
-    else
-        tabBarController.viewControllers = @[homeNav,proNav,newNav,mineNav];
+    //if(bShowCart)
+    //    tabBarController.viewControllers = @[activityNav,courseNav,newNav,cartNav,mineNav];
+    //else
+        tabBarController.viewControllers = @[activityNav,courseNav,noticeNav,mineInfoNav];
     tabBarController.delegate = self;
     
     
@@ -153,6 +256,7 @@
     
     // customise NavigationBar UI Effect
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithRenderColor:NAVBAR_COLOR renderSize:CGSizeMake(10., 10.)] forBarMetrics:UIBarMetricsDefault];
+    
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16.],NSForegroundColorAttributeName:[UIColor blackColor]}];
     
     
@@ -162,24 +266,12 @@
     return tabBarController;
 }
 
-- (void)setCartNum
-{
-    UITabBarController* tabVC = (UITabBarController*)self.window.rootViewController;
-    UINavigationController* navVC = [tabVC.viewControllers objectAtIndex:3];
-    __weak typeof (navVC) wNav = navVC;
-    [CartModel quertCart:nil value:nil block:^(NSArray* result){
-        if(result.count > 0)
-            wNav.tabBarItem.badgeValue  = [NSString stringWithFormat:@"%d",(int)result.count];
-        else
-            wNav.tabBarItem.badgeValue  = nil;
-    }];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadApp) name:kDidShowCart object:nil];
     
-    [[UserInstance ShardInstnce] isUserStillOnline];
+   
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
@@ -190,7 +282,7 @@
     
     UIViewController *rootViewController = [self setRootVC:YES];
     [[self window] setRootViewController:rootViewController];
-    [self setCartNum];
+
     
     // set  backgroundColor
     [[self window] setBackgroundColor:[UIColor whiteColor]];
@@ -223,7 +315,7 @@
     {
         UIViewController *rootViewController = [self setRootVC:YES];
         [[self window] setRootViewController:rootViewController];
-        [self setCartNum];
+      
     }
 }
 
@@ -251,16 +343,7 @@
 
 #pragma mark - thidr part
 #pragma mark - umeng
-- (void)setUmeng
-{
-    NSString* umApp = @"";//自行设置key
-    [MobClick startWithAppkey:umApp reportPolicy:SENDWIFIONLY channelId:nil];
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [MobClick setAppVersion:version];
-    [OyTool ShardInstance];
-    [MobClick updateOnlineConfig];
-    [UMFeedback setAppkey:umApp];
-}
+
 
 #pragma mark - JPush
 - (void)setJPush:(NSDictionary*)launchOptions

@@ -18,7 +18,7 @@ typedef enum
 - (void)refreshMyOrder;
 @end
 
-@interface MineMyAddressVC : OneBaseVC
+@interface MineMyAddressVC : PulaBaseVC
 @property(nonatomic,weak)id<MineMyAddressVCDelegate> delegate;
 - (id)initWithType:(MineAddressType)type orderId:(int)orderId;
 @end

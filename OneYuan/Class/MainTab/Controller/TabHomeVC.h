@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabHomeVC : OneBaseVC
+@interface TabHomeVC : PulaBaseVC
 
 @end

@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RegSms : OneBaseParser
+@interface RegSms : PulaBaseParser
 @property(nonatomic,copy)NSNumber* state;
 @end
 
-@interface RegResut : OneBaseParser
+@interface RegResut : PulaBaseParser
 @property(nonatomic,copy)NSNumber* state;
 @property(nonatomic,copy)NSString* str;
 @end

@@ -10,7 +10,7 @@
 
 @protocol  MineShowOrderItem <NSObject>
 @end
-@interface MineShowOrderItem : OneBaseParser
+@interface MineShowOrderItem : PulaBaseParser
 @property (nonatomic,copy)NSString  *postID;
 @property (nonatomic,copy)NSNumber  *postState;
 @property (nonatomic,copy)NSString  *postPic;
@@ -21,7 +21,7 @@
 @property (nonatomic,copy)NSString  *postPoint;
 @end
 
-@interface MineShowOrderList : OneBaseParser
+@interface MineShowOrderList : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *postCount;
 @property (nonatomic,copy)NSNumber  *unPostCount;
 @property (nonatomic,copy)NSArray   *listItems;

@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AllProPeriod : OneBaseParser
+@interface AllProPeriod : PulaBaseParser
 @property (nonatomic,copy)NSNumber* goodsID;
 @property (nonatomic,copy)NSNumber* codeID;
 @property (nonatomic,copy)NSNumber* codeState;
 @property (nonatomic,copy)NSNumber* codePeriod;
 @end
 
-@interface AllProPeriodList : OneBaseParser
+@interface AllProPeriodList : PulaBaseParser
 @property (nonatomic,copy)NSArray* Rows;
 @end
 
-@interface AllProItme : OneBaseParser
+@interface AllProItme : PulaBaseParser
 @property (nonatomic,copy)NSNumber* goodsID;
 @property (nonatomic,copy)NSString* goodsSName;
 @property (nonatomic,copy)NSString* goodsPic;
@@ -32,7 +32,7 @@
 @property (nonatomic,copy)NSNumber* goodsTag;
 @end
 
-@interface AllProList : OneBaseParser
+@interface AllProList : PulaBaseParser
 @property (nonatomic,copy)NSNumber* count;
 @property (nonatomic,copy)NSArray* Rows;
 @end

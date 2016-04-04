@@ -123,7 +123,7 @@
     [[XBToastManager ShardInstance] showprogress];
     [MineMyAddressModel setDefault:addressId success:^(AFHTTPRequestOperation* operation, NSObject* result){
         [[XBToastManager ShardInstance] showprogress];
-        OneBaseParser* p = [[OneBaseParser alloc] initWithDictionary:(NSDictionary*)result];
+        PulaBaseParser* p = [[PulaBaseParser alloc] initWithDictionary:(NSDictionary*)result];
         if([p.code intValue ] == 0)
         {
             [wSelf getAddress];
@@ -198,7 +198,7 @@
                            otherButtonItems:[RIButtonItem itemWithLabel:@"确认" action:^{
 
             [MineMyOrderModel doConfirmOrder:myOrderId addressId:[item.ID intValue] success:^(AFHTTPRequestOperation* opreation, NSObject* result){
-                OneBaseParser* p = [[OneBaseParser alloc] initWithDictionary:(NSDictionary*)result];
+                PulaBaseParser* p = [[PulaBaseParser alloc] initWithDictionary:(NSDictionary*)result];
                 NSLog(@"%@",p);
                 if([p.code intValue] == 0)
                 {
@@ -246,7 +246,7 @@
             [[XBToastManager ShardInstance] showprogress];
             [MineMyAddressModel delMyAddress:[item.ID intValue] success:^(AFHTTPRequestOperation* operation, NSObject* result){
                 [[XBToastManager ShardInstance] hideprogress];
-                OneBaseParser* p = [[OneBaseParser alloc] initWithDictionary:(NSDictionary*)result];
+                PulaBaseParser* p = [[PulaBaseParser alloc] initWithDictionary:(NSDictionary*)result];
                 if([p.code intValue] == 0)
                 {
                     NSMutableArray* tmp = [NSMutableArray arrayWithArray:myAddressData.list];

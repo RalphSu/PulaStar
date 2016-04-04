@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabMineVC : OneBaseVC
+@interface TabMineVC : PulaBaseVC
 
 @end

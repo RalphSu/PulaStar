@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ProductPics : OneBaseParser
+@interface ProductPics : PulaBaseParser
 @property(nonatomic,copy)NSString* picName;
 @property(nonatomic,copy)NSString* picRemark;
 @end
 
-@interface ProductInfo : OneBaseParser
+@interface ProductInfo : PulaBaseParser
 @property(nonatomic,copy)NSString* goodsName;
 @property(nonatomic,copy)NSString* goodsAltName;
 @property(nonatomic,copy)NSNumber* codeID;
@@ -34,18 +34,18 @@
 @property(nonatomic,copy)NSNumber* codeRUserBuyCount;
 @end
 
-@interface ProductTopic : OneBaseParser
+@interface ProductTopic : PulaBaseParser
 @property(nonatomic,copy)NSNumber* Topic;
 @property(nonatomic,copy)NSNumber* Reply;
 @end
 
-@interface ProductDetail : OneBaseParser
+@interface ProductDetail : PulaBaseParser
 @property(nonatomic,copy)NSArray* Rows1;
 @property(nonatomic,strong)ProductInfo* Rows2;
 @property(nonatomic,strong)ProductTopic* Rows3;
 @end
 
-@interface ProductLottery : OneBaseParser
+@interface ProductLottery : PulaBaseParser
 @property(nonatomic,copy)NSNumber* codePeriod;
 @property(nonatomic,copy)NSNumber* codeGoodsID;
 @property(nonatomic,copy)NSString* goodsName;
@@ -65,12 +65,12 @@
 @property(nonatomic,copy)NSNumber* codeSales;
 @end
 
-@interface ProductCodeBuy : OneBaseParser
+@interface ProductCodeBuy : PulaBaseParser
 @property(nonatomic,copy)NSString* buyTime;
 @property(nonatomic,copy)NSString* rnoNum;
 @end
 
-@interface ProductLotteryDetail : OneBaseParser
+@interface ProductLotteryDetail : PulaBaseParser
 @property(nonatomic,copy)NSArray* Rows1;
 @property(nonatomic,strong)ProductLottery* Rows2;
 @property(nonatomic,strong)ProductTopic* Rows3;

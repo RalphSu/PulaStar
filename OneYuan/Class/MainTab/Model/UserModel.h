@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OYUser : OneBaseParser
+@interface OYUser : PulaBaseParser
 @property(nonatomic,copy)NSString* username;
 
 @end

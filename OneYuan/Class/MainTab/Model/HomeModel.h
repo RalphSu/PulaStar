@@ -11,7 +11,7 @@
 
 @protocol  HomeAd <NSObject>
 @end
-@interface HomeAd : OneBaseParser
+@interface HomeAd : PulaBaseParser
 @property (nonatomic,copy)NSNumber* type;
 @property (nonatomic,copy)NSString* src;
 @property (nonatomic,copy)NSString* url;
@@ -20,13 +20,13 @@
 @property (nonatomic,copy)NSNumber* height;
 @end
 
-@interface HomeAdList : OneBaseParser
+@interface HomeAdList : PulaBaseParser
 @property (nonatomic,copy)NSArray* Rows;
 @end
 
 @protocol  HomeNewing <NSObject>
 @end
-@interface HomeNewing : OneBaseParser
+@interface HomeNewing : PulaBaseParser
 @property (nonatomic,copy)NSString* goodsPic;
 @property (nonatomic,copy)NSString* goodsSName;
 @property (nonatomic,copy)NSString* seconds;
@@ -37,7 +37,7 @@
 @property (nonatomic,copy)NSNumber* codeSales;
 @end
 
-@interface HomeNewingList : OneBaseParser
+@interface HomeNewingList : PulaBaseParser
 @property (nonatomic,copy)NSNumber* errorCode;
 @property (nonatomic,copy)NSNumber* maxSeconds;
 @property (nonatomic,copy)NSArray*  listItems;
@@ -45,7 +45,7 @@
 
 @protocol  HomeNewed <NSObject>
 @end
-@interface HomeNewed : OneBaseParser
+@interface HomeNewed : PulaBaseParser
 @property (nonatomic,copy)NSNumber* codeGoodsID;
 @property (nonatomic,copy)NSString* codeGoodsPic;
 @property (nonatomic,copy)NSString* codeGoodsSName;
@@ -58,7 +58,7 @@
 
 @protocol  HomeHostest <NSObject>
 @end
-@interface HomeHostest : OneBaseParser
+@interface HomeHostest : PulaBaseParser
 @property (nonatomic,copy)NSNumber* codePrice;
 @property (nonatomic,copy)NSNumber* codeQuantity;
 @property (nonatomic,copy)NSNumber* codeSales;
@@ -69,14 +69,14 @@
 
 @protocol  HomeShowOrder <NSObject>
 @end
-@interface HomeShowOrder : OneBaseParser
+@interface HomeShowOrder : PulaBaseParser
 @property (nonatomic,copy)NSNumber* postID;
 @property (nonatomic,copy)NSString* postImg;
 @property (nonatomic,copy)NSString* postTime;
 @property (nonatomic,copy)NSString* postTitle;
 @end
 
-@interface HomePageList : OneBaseParser
+@interface HomePageList : PulaBaseParser
 @property (nonatomic,copy)NSArray* Rows1;
 @property (nonatomic,copy)NSArray* Rows2;
 @property (nonatomic,copy)NSArray* Rows3;
@@ -84,7 +84,7 @@
 
 @protocol  HomeSearchAd <NSObject>
 @end
-@interface HomeSearchAd : OneBaseParser
+@interface HomeSearchAd : PulaBaseParser
 @property (nonatomic,copy)NSNumber* type;
 @property (nonatomic,copy)NSString* src;
 @property (nonatomic,copy)NSString* url;
@@ -93,13 +93,13 @@
 @property (nonatomic,copy)NSNumber* height;
 @end
 
-@interface HomeSearchAdList : OneBaseParser
+@interface HomeSearchAdList : PulaBaseParser
 @property (nonatomic,copy)NSArray* Rows;
 @end
 
 @protocol  HomeOrderShowItem <NSObject>
 @end
-@interface HomeOrderShowItem : OneBaseParser
+@interface HomeOrderShowItem : PulaBaseParser
 @property (nonatomic,copy)NSNumber* postID;
 @property (nonatomic,copy)NSString* postAllPic;
 @property (nonatomic,copy)NSString* postTitle;
@@ -112,7 +112,7 @@
 @property (nonatomic,copy)NSNumber* postReplyCount;
 @end
 
-@interface HomeOrderShowList : OneBaseParser
+@interface HomeOrderShowList : PulaBaseParser
 @property (nonatomic,copy)NSNumber* count;
 @property (nonatomic,copy)NSArray*  listItems;
 @end

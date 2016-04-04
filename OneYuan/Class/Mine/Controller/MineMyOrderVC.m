@@ -185,7 +185,7 @@
                        otherButtonItems:[RIButtonItem itemWithLabel:@"确认" action:^{
         
         [MineMyOrderModel doConfirmShip:orderId success:^(AFHTTPRequestOperation* opreation, NSObject* result){
-            OneBaseParser* p = [[OneBaseParser alloc] initWithDictionary:(NSDictionary*)result];
+            PulaBaseParser* p = [[PulaBaseParser alloc] initWithDictionary:(NSDictionary*)result];
             NSLog(@"%@",p);
             if([p.code intValue] == 0)
             {

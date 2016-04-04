@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : OneBaseVC
+@interface LoginVC : PulaBaseVC
 
 @end

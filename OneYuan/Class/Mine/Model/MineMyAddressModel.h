@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MineMyAddressItem : OneBaseParser
+@interface MineMyAddressItem : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *ID;
 @property(nonatomic,copy)NSNumber   *UserID;
 @property(nonatomic,copy)NSString   *Name;
@@ -26,7 +26,7 @@
 @property(nonatomic,copy)NSString   *DName;
 @end
 
-@interface MineMyAddressItemList : OneBaseParser
+@interface MineMyAddressItemList : PulaBaseParser
 @property(nonatomic,copy)NSArray* list;
 @end
 

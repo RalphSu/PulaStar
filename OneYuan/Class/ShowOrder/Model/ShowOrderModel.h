@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ShowOrderItem : OneBaseParser
+@interface ShowOrderItem : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *postID;
 @property(nonatomic,copy)NSString   *postAllPic;
 @property(nonatomic,copy)NSString   *postTitle;
@@ -21,12 +21,12 @@
 @property(nonatomic,copy)NSNumber   *postReplyCount;
 @end
 
-@interface ShowOrderList : OneBaseParser
+@interface ShowOrderList : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *count;
 @property(nonatomic,copy)NSArray    *Rows;
 @end
 
-@interface ShowOrderPostItem : OneBaseParser
+@interface ShowOrderPostItem : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *codeID;
 @property(nonatomic,copy)NSNumber   *codeGoodsID;
 @property(nonatomic,copy)NSString   *codeGoodsPic;
@@ -50,11 +50,11 @@
 @property(nonatomic,copy)NSNumber   *postPoint;
 @end
 
-@interface ShowOrderPostDetail : OneBaseParser
+@interface ShowOrderPostDetail : PulaBaseParser
 @property(nonatomic,strong)ShowOrderPostItem    *Rows;
 @end
 
-@interface ShowOrderReplyItem : OneBaseParser
+@interface ShowOrderReplyItem : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *replyID;
 @property(nonatomic,copy)NSString   *userName;
 @property(nonatomic,copy)NSString   *userWeb;
@@ -66,7 +66,7 @@
 @property(nonatomic,copy)NSString   *userPhoto;
 @end
 
-@interface ShowOrderReplyList : OneBaseParser
+@interface ShowOrderReplyList : PulaBaseParser
 @property(nonatomic,copy)NSArray    *Rows;
 @end
 

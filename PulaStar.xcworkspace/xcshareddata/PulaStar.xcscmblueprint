@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A9C5EF697D56858E5C13534D38C4CDEDFA514901",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A9C5EF697D56858E5C13534D38C4CDEDFA514901" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EFC8A5FC-BA62-4E26-9321-D1E213C0C0BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A9C5EF697D56858E5C13534D38C4CDEDFA514901" : "opensource\/yiyuan\/YiYuanYunGou\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PulaStar",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PulaStar.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/caniggiagoal\/PulaStar.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A9C5EF697D56858E5C13534D38C4CDEDFA514901"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JxbSir\/YiYuanYunGou.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A9C5EF697D56858E5C13534D38C4CDEDFA514901"
+    }
+  ]
+}

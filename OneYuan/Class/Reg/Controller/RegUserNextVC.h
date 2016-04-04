@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegUserNextVC : OneBaseVC
+@interface RegUserNextVC : PulaBaseVC
 
 - (id)initWithPhone:(NSString*)phone;
 @end

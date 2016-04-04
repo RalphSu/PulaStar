@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineMyOrderVC : OneBaseVC
+@interface MineMyOrderVC : PulaBaseVC
 
 @end

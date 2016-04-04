@@ -10,7 +10,7 @@
 
 @protocol  NewestProItme <NSObject>
 @end
-@interface NewestProItme : OneBaseParser
+@interface NewestProItme : PulaBaseParser
 @property (nonatomic,copy)NSNumber* codeID;
 @property (nonatomic,copy)NSNumber* codeGoodsID;
 @property (nonatomic,copy)NSNumber* codePeriod;
@@ -27,7 +27,7 @@
 @property (nonatomic,copy)NSString* userWeb;
 @end
 
-@interface NewestProList : OneBaseParser
+@interface NewestProList : PulaBaseParser
 @property (nonatomic,copy)NSNumber* count;
 @property (nonatomic,copy)NSArray* Rows;
 @end

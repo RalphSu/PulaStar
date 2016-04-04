@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductBuyListVC : OneBaseVC
+@interface ProductBuyListVC : PulaBaseVC
 
 - (id)initWithCodeId:(int)codeId;
 @end

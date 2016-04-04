@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MineMyOrderTransInfo : OneBaseParser
+@interface MineMyOrderTransInfo : PulaBaseParser
 @property(nonatomic,copy)NSString* msg;
 @property(nonatomic,copy)NSString* time;
 @end
 
-@interface MineMyOrderTrans : OneBaseParser
+@interface MineMyOrderTrans : PulaBaseParser
 @property(nonatomic,copy)NSString* tranNo;
 @property(nonatomic,copy)NSString* tranCompany;
 @property(nonatomic,copy)NSString* tranAddress;

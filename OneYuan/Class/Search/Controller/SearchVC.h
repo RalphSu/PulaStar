@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchVC : OneBaseVC
+@interface SearchVC : PulaBaseVC
 
 - (id)initWithKey:(NSString*)key;
 

@@ -42,6 +42,7 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didLoginOk) name:kDidLoginOk object:nil];
+    
     __weak typeof (self) wSelf = self;
     self.title = @"我的云购";
     

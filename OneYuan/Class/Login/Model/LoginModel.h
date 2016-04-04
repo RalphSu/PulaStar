@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LoginParser : OneBaseParser
+@interface LoginParser : PulaBaseParser
 @property (nonatomic,copy)NSNumber* state;
 @end
 
-@interface LoginOkParser : OneBaseParser
+@interface LoginOkParser : PulaBaseParser
 @end
 
 @interface LoginModel : NSObject

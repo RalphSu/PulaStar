@@ -15,7 +15,7 @@
 
 @end
 
-@interface MineMyAddressEditVC : OneBaseVC
+@interface MineMyAddressEditVC : PulaBaseVC
 @property(nonatomic,weak)id<MineMyAddressEditVCDelegate> delegate;
 - (id)initWithAddress:(MineMyAddressItem*)item;
 @end

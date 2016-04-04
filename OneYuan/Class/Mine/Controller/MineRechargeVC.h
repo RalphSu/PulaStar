@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineRechargeVC : OneBaseVC
+@interface MineRechargeVC : PulaBaseVC
 
 @end

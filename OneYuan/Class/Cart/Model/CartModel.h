@@ -15,7 +15,7 @@ typedef enum
     CartAddResult_Failed
 }CartAddResult;
 
-@interface CartItem : OneBaseParser
+@interface CartItem : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *cPid;
 @property (nonatomic,copy)NSString  *cName;
 @property (nonatomic,copy)NSNumber  *cPeriod;
@@ -25,12 +25,12 @@ typedef enum
 @property (nonatomic,copy)NSNumber  *cCid;
 @end
 
-@interface CartResult : OneBaseParser
+@interface CartResult : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *state;
 @property (nonatomic,copy)NSString  *str;
 @end
 
-@interface CartResultAsnyc : OneBaseParser
+@interface CartResultAsnyc : PulaBaseParser
 @property (nonatomic,copy)NSNumber  *state;
 @end
 

@@ -10,7 +10,7 @@
 
 @protocol MineMoneyInItem <NSObject>
 @end
-@interface MineMoneyInItem : OneBaseParser
+@interface MineMoneyInItem : PulaBaseParser
 @property(nonatomic,copy)NSString*  logTime;
 @property(nonatomic,copy)NSString*  logMoney;
 @end
@@ -21,7 +21,7 @@
 @property(nonatomic,copy)NSString* typeName;
 @end
 
-@interface MineMoneyList : OneBaseParser
+@interface MineMoneyList : PulaBaseParser
 @property(nonatomic,copy)NSNumber   *count;
 @property(nonatomic,copy)NSArray    *listItems;
 @end
